@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  DingMVVM
+//
+//  Created by duodian on 2017/8/1.
+//  Copyright © 2017年 丁远帅. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "DDToolMacro.h"
+
+#endif /* PrefixHeader_pch */
