@@ -10,5 +10,10 @@
 #define PrefixHeader_pch
 
 #import "DDToolMacro.h"
+#import "ReactiveCocoa.h"
+#import "DDRequestManager.h"
+#import "NSObject+Model.h"
+#import "UIFont+DDExtension.h"
+#import "UIImage+DDExtension.h"
 
 #endif /* PrefixHeader_pch */

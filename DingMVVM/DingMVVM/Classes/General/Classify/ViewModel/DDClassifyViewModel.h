@@ -9,5 +9,8 @@
 #import "DDBaseViewModel.h"
 
 @interface DDClassifyViewModel : DDBaseViewModel
-
+@property(nonatomic,strong)RACCommand *refreshCommand;
+@property(nonatomic,strong)NSArray *leftArray;
+@property (nonatomic,strong) NSMutableDictionary *dataDic;
+@property(nonatomic,strong)RACCommand *leftClickCommand;
 @end
