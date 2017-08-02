@@ -54,6 +54,11 @@
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
         return [RACSignal empty];
     }];
+    
+    self.goodsCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        
+        return [RACSignal empty];
+    }];
 }
 
 - (NSMutableDictionary *)dataDic

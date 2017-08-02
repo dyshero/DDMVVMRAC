@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class DDViewModelNavigationImpl;
+@class DDBaseViewModel;
 
 @interface DDBaseViewModel : NSObject
 @property (nonatomic,copy) NSString *title;
+@property(nonatomic,strong)DDViewModelNavigationImpl *naviImpl;
 - (instancetype)initWithTitle:(NSString *)title;
+- (instancetype)initWithViewModel:(DDBaseViewModel *)viewModel;
 @end

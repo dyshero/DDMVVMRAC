@@ -15,4 +15,11 @@
     }
     return self;
 }
+
+- (instancetype)initWithViewModel:(DDBaseViewModel *)viewModel {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
 @end

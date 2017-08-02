@@ -8,6 +8,7 @@
 
 #import "DDBaseViewController.h"
 #import "DDBaseViewModel.h"
+#import "DDViewModelNavigationImpl.h"
 
 @interface DDBaseViewController ()
 @property(nonatomic,strong,readwrite)DDBaseViewModel *viewModel;
@@ -20,6 +21,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.viewModel.naviImpl = [[DDViewModelNavigationImpl alloc] initWithNavigationController:self.navigationController];
 }
 
 - (instancetype)initWithViewModel:(DDBaseViewModel *)viewModel {

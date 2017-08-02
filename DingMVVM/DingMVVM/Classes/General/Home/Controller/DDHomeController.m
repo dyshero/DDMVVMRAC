@@ -46,9 +46,7 @@
 #pragma mark 懒加载
 - (DDHomeCollectionView *)collectionView {
     if (!_collectionView) {
-        
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-//        layout. = CGSizeMake(100, 100);
         _collectionView = [[DDHomeCollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 49 - 64) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor yellowColor];
     }

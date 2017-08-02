@@ -55,6 +55,9 @@
 		FB89629D1F31B20600C6DD35 /* DDHomeBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB89629B1F31B20600C6DD35 /* DDHomeBannerCell.xib */; };
 		FB8962A01F31B3B900C6DD35 /* DDHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB89629F1F31B3B900C6DD35 /* DDHomeHeadView.m */; };
 		FB8962A41F31B3E400C6DD35 /* DDHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962A21F31B3E400C6DD35 /* DDHomeCell.m */; };
+		FB8962A81F31DAB100C6DD35 /* DDViewModelNavigationImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962A71F31DAB100C6DD35 /* DDViewModelNavigationImpl.m */; };
+		FB8962B01F31DE0300C6DD35 /* DDGoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962AF1F31DE0300C6DD35 /* DDGoodsDetailController.m */; };
+		FB8962B31F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962B21F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +141,13 @@
 		FB89629F1F31B3B900C6DD35 /* DDHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeHeadView.m; sourceTree = "<group>"; };
 		FB8962A11F31B3E400C6DD35 /* DDHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHomeCell.h; sourceTree = "<group>"; };
 		FB8962A21F31B3E400C6DD35 /* DDHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeCell.m; sourceTree = "<group>"; };
+		FB8962A61F31DAB100C6DD35 /* DDViewModelNavigationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDViewModelNavigationImpl.h; sourceTree = "<group>"; };
+		FB8962A71F31DAB100C6DD35 /* DDViewModelNavigationImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDViewModelNavigationImpl.m; sourceTree = "<group>"; };
+		FB8962AE1F31DE0300C6DD35 /* DDGoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGoodsDetailController.h; sourceTree = "<group>"; };
+		FB8962AF1F31DE0300C6DD35 /* DDGoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGoodsDetailController.m; sourceTree = "<group>"; };
+		FB8962B11F31DE1D00C6DD35 /* DDGoodsDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGoodsDetailViewModel.h; sourceTree = "<group>"; };
+		FB8962B21F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGoodsDetailViewModel.m; sourceTree = "<group>"; };
+		FB8962B41F31E6B900C6DD35 /* DDViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDViewModelServices.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +244,7 @@
 		FB1C2A5C1F3063FB003EC09E /* General */ = {
 			isa = PBXGroup;
 			children = (
+				FB8962A91F31DD2C00C6DD35 /* Common */,
 				FB1C2A5D1F3063FB003EC09E /* Classify */,
 				FB1C2A621F3063FB003EC09E /* Home */,
 				FB1C2A671F3063FB003EC09E /* Mine */,
@@ -523,8 +534,54 @@
 			children = (
 				FB1C2AE41F308A49003EC09E /* DDRequestManager.h */,
 				FB1C2AE51F308A49003EC09E /* DDRequestManager.m */,
+				FB8962A61F31DAB100C6DD35 /* DDViewModelNavigationImpl.h */,
+				FB8962A71F31DAB100C6DD35 /* DDViewModelNavigationImpl.m */,
+				FB8962B41F31E6B900C6DD35 /* DDViewModelServices.h */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		FB8962A91F31DD2C00C6DD35 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FB8962AA1F31DD2C00C6DD35 /* Controller */,
+				FB8962AB1F31DD2C00C6DD35 /* Model */,
+				FB8962AC1F31DD2C00C6DD35 /* View */,
+				FB8962AD1F31DD2C00C6DD35 /* ViewModel */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB8962AA1F31DD2C00C6DD35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FB8962AE1F31DE0300C6DD35 /* DDGoodsDetailController.h */,
+				FB8962AF1F31DE0300C6DD35 /* DDGoodsDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FB8962AB1F31DD2C00C6DD35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB8962AC1F31DD2C00C6DD35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB8962AD1F31DD2C00C6DD35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB8962B11F31DE1D00C6DD35 /* DDGoodsDetailViewModel.h */,
+				FB8962B21F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -667,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8962B31F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m in Sources */,
 				FB1C2A9F1F30760C003EC09E /* DDShopCartViewModel.m in Sources */,
 				FB8962A41F31B3E400C6DD35 /* DDHomeCell.m in Sources */,
 				FB8962981F31AE2A00C6DD35 /* DDHomeCollectionView.m in Sources */,
@@ -676,9 +734,11 @@
 				FB89629C1F31B20600C6DD35 /* DDHomeBannerCell.m in Sources */,
 				FB1C2A421F305D60003EC09E /* AppDelegate.m in Sources */,
 				FB1C2AEF1F309A10003EC09E /* DDClassifyRightTabView.m in Sources */,
+				FB8962B01F31DE0300C6DD35 /* DDGoodsDetailController.m in Sources */,
 				FB1C2A9C1F3075E9003EC09E /* DDMineViewModel.m in Sources */,
 				FB8962951F317D5500C6DD35 /* UIImage+DDExtension.m in Sources */,
 				FB1C2A791F306456003EC09E /* DDClassifyController.m in Sources */,
+				FB8962A81F31DAB100C6DD35 /* DDViewModelNavigationImpl.m in Sources */,
 				FB89628C1F317A3100C6DD35 /* DDClassifyRightCell.m in Sources */,
 				FB1C2A931F306964003EC09E /* DDBaseViewModel.m in Sources */,
 				FB8962881F31711200C6DD35 /* DDClassifyLeftCell.m in Sources */,

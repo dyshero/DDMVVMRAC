@@ -8,6 +8,8 @@
 
 #import "DDClassifyRightTabView.h"
 #import "DDClassifyRightCell.h"
+#import "DDClassifyViewModel.h"
+
 @interface DDClassifyRightTabView ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -44,6 +46,13 @@
     DDGoodsModel *good = array[indexPath.row];
     [cell updateGood:good];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *array = self.dataDic[self.sectionArray[indexPath.section]];
+    DDGoodsModel *good = array[indexPath.row];
+    [self.viewModel.goodsCommand execute:good];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma -mark 懒加载
