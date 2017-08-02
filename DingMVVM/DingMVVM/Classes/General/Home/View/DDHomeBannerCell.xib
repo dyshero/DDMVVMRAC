@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DDHomeBannerCell">
+            <rect key="frame" x="0.0" y="0.0" width="104" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="104" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XyH-PV-p7S">
+                        <rect key="frame" x="0.0" y="0.0" width="104" height="106"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XyH-PV-p7S" secondAttribute="trailing" id="6II-qZ-D4p"/>
+                <constraint firstItem="XyH-PV-p7S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VrE-nw-LKX"/>
+                <constraint firstAttribute="bottom" secondItem="XyH-PV-p7S" secondAttribute="bottom" id="vxF-P7-DTX"/>
+                <constraint firstItem="XyH-PV-p7S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zjT-39-tOl"/>
+            </constraints>
+            <size key="customSize" width="104" height="106"/>
+            <point key="canvasLocation" x="61" y="82"/>
+        </collectionViewCell>
+    </objects>
+</document>

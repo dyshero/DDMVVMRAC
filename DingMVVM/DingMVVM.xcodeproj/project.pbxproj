@@ -50,6 +50,11 @@
 		FB89628F1F317B1400C6DD35 /* UIFont+DDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FB89628E1F317B1400C6DD35 /* UIFont+DDExtension.m */; };
 		FB8962921F317B9500C6DD35 /* DDClassifyManagerCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962911F317B9500C6DD35 /* DDClassifyManagerCountView.m */; };
 		FB8962951F317D5500C6DD35 /* UIImage+DDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962941F317D5500C6DD35 /* UIImage+DDExtension.m */; };
+		FB8962981F31AE2A00C6DD35 /* DDHomeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962971F31AE2A00C6DD35 /* DDHomeCollectionView.m */; };
+		FB89629C1F31B20600C6DD35 /* DDHomeBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB89629A1F31B20600C6DD35 /* DDHomeBannerCell.m */; };
+		FB89629D1F31B20600C6DD35 /* DDHomeBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB89629B1F31B20600C6DD35 /* DDHomeBannerCell.xib */; };
+		FB8962A01F31B3B900C6DD35 /* DDHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB89629F1F31B3B900C6DD35 /* DDHomeHeadView.m */; };
+		FB8962A41F31B3E400C6DD35 /* DDHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962A21F31B3E400C6DD35 /* DDHomeCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +129,15 @@
 		FB8962911F317B9500C6DD35 /* DDClassifyManagerCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDClassifyManagerCountView.m; sourceTree = "<group>"; };
 		FB8962931F317D5500C6DD35 /* UIImage+DDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DDExtension.h"; sourceTree = "<group>"; };
 		FB8962941F317D5500C6DD35 /* UIImage+DDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DDExtension.m"; sourceTree = "<group>"; };
+		FB8962961F31AE2A00C6DD35 /* DDHomeCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHomeCollectionView.h; sourceTree = "<group>"; };
+		FB8962971F31AE2A00C6DD35 /* DDHomeCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeCollectionView.m; sourceTree = "<group>"; };
+		FB8962991F31B20600C6DD35 /* DDHomeBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHomeBannerCell.h; sourceTree = "<group>"; };
+		FB89629A1F31B20600C6DD35 /* DDHomeBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeBannerCell.m; sourceTree = "<group>"; };
+		FB89629B1F31B20600C6DD35 /* DDHomeBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDHomeBannerCell.xib; sourceTree = "<group>"; };
+		FB89629E1F31B3B900C6DD35 /* DDHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHomeHeadView.h; sourceTree = "<group>"; };
+		FB89629F1F31B3B900C6DD35 /* DDHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeHeadView.m; sourceTree = "<group>"; };
+		FB8962A11F31B3E400C6DD35 /* DDHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHomeCell.h; sourceTree = "<group>"; };
+		FB8962A21F31B3E400C6DD35 /* DDHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHomeCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +326,15 @@
 		FB1C2A651F3063FB003EC09E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB8962961F31AE2A00C6DD35 /* DDHomeCollectionView.h */,
+				FB8962971F31AE2A00C6DD35 /* DDHomeCollectionView.m */,
+				FB8962991F31B20600C6DD35 /* DDHomeBannerCell.h */,
+				FB89629A1F31B20600C6DD35 /* DDHomeBannerCell.m */,
+				FB89629B1F31B20600C6DD35 /* DDHomeBannerCell.xib */,
+				FB89629E1F31B3B900C6DD35 /* DDHomeHeadView.h */,
+				FB89629F1F31B3B900C6DD35 /* DDHomeHeadView.m */,
+				FB8962A11F31B3E400C6DD35 /* DDHomeCell.h */,
+				FB8962A21F31B3E400C6DD35 /* DDHomeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +593,7 @@
 				FB1C2AD41F3087AD003EC09E /* HomeData in Resources */,
 				FB1C2AD81F3087AD003EC09E /* PicComment in Resources */,
 				FB1C2A4D1F305D60003EC09E /* LaunchScreen.storyboard in Resources */,
+				FB89629D1F31B20600C6DD35 /* DDHomeBannerCell.xib in Resources */,
 				FB1C2AD11F3087AD003EC09E /* FinishDeliveryOrder in Resources */,
 				FB1C2AD21F3087AD003EC09E /* FinishOrder in Resources */,
 				FB8962891F31711200C6DD35 /* DDClassifyLeftCell.xib in Resources */,
@@ -644,9 +668,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1C2A9F1F30760C003EC09E /* DDShopCartViewModel.m in Sources */,
+				FB8962A41F31B3E400C6DD35 /* DDHomeCell.m in Sources */,
+				FB8962981F31AE2A00C6DD35 /* DDHomeCollectionView.m in Sources */,
 				FB1C2AEC1F309004003EC09E /* NSObject+Model.m in Sources */,
 				FB1C2AE61F308A49003EC09E /* DDRequestManager.m in Sources */,
 				FB1C2A991F3075C8003EC09E /* DDHomeViewModel.m in Sources */,
+				FB89629C1F31B20600C6DD35 /* DDHomeBannerCell.m in Sources */,
 				FB1C2A421F305D60003EC09E /* AppDelegate.m in Sources */,
 				FB1C2AEF1F309A10003EC09E /* DDClassifyRightTabView.m in Sources */,
 				FB1C2A9C1F3075E9003EC09E /* DDMineViewModel.m in Sources */,
@@ -660,6 +687,7 @@
 				FB1C2A961F3075B1003EC09E /* DDClassifyViewModel.m in Sources */,
 				FB8962921F317B9500C6DD35 /* DDClassifyManagerCountView.m in Sources */,
 				FB1C2A7F1F306475003EC09E /* DDShopCartController.m in Sources */,
+				FB8962A01F31B3B900C6DD35 /* DDHomeHeadView.m in Sources */,
 				FB1C2AA21F307BAB003EC09E /* DDBaseNavController.m in Sources */,
 				FB1C2A3F1F305D60003EC09E /* main.m in Sources */,
 				FB1C2A7C1F306464003EC09E /* DDMineController.m in Sources */,

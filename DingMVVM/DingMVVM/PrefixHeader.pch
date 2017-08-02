@@ -15,5 +15,6 @@
 #import "NSObject+Model.h"
 #import "UIFont+DDExtension.h"
 #import "UIImage+DDExtension.h"
+#import <MJRefresh/MJRefresh.h>
 
 #endif /* PrefixHeader_pch */

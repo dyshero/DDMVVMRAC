@@ -9,5 +9,7 @@
 #import "DDBaseViewModel.h"
 
 @interface DDHomeViewModel : DDBaseViewModel
-
+@property (nonatomic,strong)RACCommand *refreshCommand;
+@property(nonatomic,strong)NSArray      *headData;
+@property(nonatomic,strong)NSArray      *dataArray;
 @end

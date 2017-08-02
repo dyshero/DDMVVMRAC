@@ -16,4 +16,11 @@
 ///本地数据（dic）
 + (RACSignal *)postDicDataWithURL:(NSString *)urlString
                      withpramater:(NSDictionary *)paremater;
+
++ (RACSignal *)getWithURL:(NSString *)uslString
+            withParamater:(NSDictionary *)paramter;
+
++ (RACSignal *)postWithURL:(NSString *)urlString
+             withParamater:(NSDictionary *)parameter;
+
 @end
