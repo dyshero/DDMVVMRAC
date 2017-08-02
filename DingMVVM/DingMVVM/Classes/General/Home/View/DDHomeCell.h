@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DDGoodsModel;
 
 @interface DDHomeCell : UICollectionViewCell
-
+- (void)updateGoods:(DDGoodsModel *)goods;
 @end

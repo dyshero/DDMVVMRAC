@@ -10,7 +10,7 @@
 #import "DDHomeCell.h"
 #import "DDHomeHeadView.h"
 
-@interface DDHomeCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface DDHomeCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @end
 
 @implementation DDHomeCollectionView
@@ -31,13 +31,13 @@
     self.delegate = self;
     self.dataSource = self;
     
-//    [self registerClass:[DDHomeCell class] forCellWithReuseIdentifier:@"cell"];
-//    [self registerClass:[DDHomeHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    [self registerClass:[DDHomeCell class] forCellWithReuseIdentifier:@"cell"];
+    [self registerClass:[DDHomeHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
 }
 
 - (NSInteger )collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.dataArray.count;
+    return 10;
 }
 
 - (NSInteger )numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -46,10 +46,8 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    DDHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor redColor];
-    UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
-    cell.backgroundColor = [UIColor redColor];
+    DDHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    [cell updateGoods:self.dataArray[indexPath.item]];
     return cell;
 }
 

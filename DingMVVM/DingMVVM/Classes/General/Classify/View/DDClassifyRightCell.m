@@ -7,6 +7,8 @@
 //
 
 #import "DDClassifyRightCell.h"
+#import "DDGoodsModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
 
 @interface DDClassifyRightCell ()
@@ -125,6 +127,39 @@
         make.width.mas_equalTo(150);
         make.height.mas_equalTo(20);
     }];
+}
+
+- (void)updateGood:(DDGoodsModel *)goods
+{
+    //  检查购物车是否有商品
+//    if ([[WTKShoppingManager manager].goodsDic objectForKey:goods.id])
+//    {
+//        WTKGood *good = [[WTKShoppingManager manager].goodsDic objectForKey:goods.id];
+//        goods.num = good.num ;
+//    }
+//    else
+//    {
+//        //        car没有这个商品
+//        goods.num = 0;
+//    }
+//    self.goods = goods;
+    
+    self.w_titleLabel.text      = goods.title;
+    self.w_specLabel.text       = goods.specification;
+    self.w_priceLabel.text      = [NSString stringWithFormat:@"¥ %.2f",goods.price];
+    [self.w_imageView sd_setImageWithURL:[NSURL URLWithString:goods.avatar_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
+    self.w_saleCount.text       = [NSString stringWithFormat:@"已售 %d",goods.sale_count];
+//    [self.managerView updateGood:goods];
+//    if (goods.stock <= 0)
+//    {
+//        self.w_stokeLabel.hidden= NO;
+//        self.managerView.hidden = YES;
+//    }
+//    else
+//    {
+//        self.w_stokeLabel.hidden= YES;
+//        self.managerView.hidden = NO;
+//    }
 }
 
 - (void)bind {

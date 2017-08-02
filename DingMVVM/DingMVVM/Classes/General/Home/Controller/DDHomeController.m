@@ -25,9 +25,15 @@
     [self bindViewModel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)bindViewModel {
+    @weakify(self)
     RAC(self.collectionView,dataArray) = RACObserve(self.viewModel,dataArray);
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self)
         [self.viewModel.refreshCommand execute:self.collectionView];
     }];
     [self.collectionView.mj_header beginRefreshing];
@@ -40,7 +46,9 @@
 #pragma mark 懒加载
 - (DDHomeCollectionView *)collectionView {
     if (!_collectionView) {
-        UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
+        
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//        layout. = CGSizeMake(100, 100);
         _collectionView = [[DDHomeCollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 49 - 64) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor yellowColor];
     }

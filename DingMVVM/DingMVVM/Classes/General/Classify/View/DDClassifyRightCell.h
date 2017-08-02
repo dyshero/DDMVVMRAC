@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DDGoodsModel;
 
 @interface DDClassifyRightCell : UITableViewCell
-
+- (void)updateGood:(DDGoodsModel *)goods;
 @end

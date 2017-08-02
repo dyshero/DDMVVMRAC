@@ -7,7 +7,9 @@
 //
 
 #import "DDHomeCell.h"
+#import "DDGoodsModel.h"
 #import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DDHomeCell ()
 @property(nonatomic,strong)UIImageView *ddImageView;
@@ -110,6 +112,22 @@
 //    }];
 }
 
-
+- (void)updateGoods:(DDGoodsModel *)goods {
+    self.ddTitleLabel.text = goods.title;
+    self.ddPriceLabel.text = [NSString stringWithFormat:@"%.2f",goods.price];
+    
+    [self.ddImageView sd_setImageWithURL:[NSURL URLWithString:goods.thumb_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
+    if (goods.stock <= 0)
+    {
+        self.ddStockLabel.hidden   = NO;
+//        self.managerView.hidden     = YES;
+    }
+    else
+    {
+        self.ddStockLabel.hidden   = YES;
+//        self.managerView.hidden     = NO;
+//        [self.managerView updateGood:goods];
+    }
+}
 
 @end
