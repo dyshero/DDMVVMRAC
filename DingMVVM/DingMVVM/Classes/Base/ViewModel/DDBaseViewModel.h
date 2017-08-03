@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class DDViewModelNavigationImpl;
+#import "DDViewModelNavigationImpl.h"
 @class DDBaseViewModel;
 
 @interface DDBaseViewModel : NSObject

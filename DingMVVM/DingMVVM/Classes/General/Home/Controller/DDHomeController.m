@@ -12,7 +12,7 @@
 #import <MJRefresh/MJRefresh.h>
 
 @interface DDHomeController ()
-@property(nonatomic,strong)DDHomeViewModel *viewModel;
+@property(nonatomic,strong) DDHomeViewModel *viewModel;
 @property (nonatomic,strong) DDHomeCollectionView *collectionView;
 @end
 
@@ -32,6 +32,7 @@
 - (void)bindViewModel {
     @weakify(self)
     RAC(self.collectionView,dataArray) = RACObserve(self.viewModel,dataArray);
+    RAC(self.collectionView,headArray) = RACObserve(self.viewModel, headData);
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         @strongify(self)
         [self.viewModel.refreshCommand execute:self.collectionView];
@@ -48,7 +49,7 @@
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         _collectionView = [[DDHomeCollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 49 - 64) collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor yellowColor];
+        _collectionView.viewModel = self.viewModel;
     }
     return _collectionView;
 }

@@ -7,7 +7,6 @@
 //
 
 #import "DDRequestManager.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <AFNetworking/AFNetworking.h>
 
 @implementation DDRequestManager
@@ -40,6 +39,7 @@
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 5;
+    
     RACSubject *sub =[ RACSubject subject];
     [manager GET:urlString parameters:paramter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [sub sendNext:@{@"code":@100,@"data":responseObject}];

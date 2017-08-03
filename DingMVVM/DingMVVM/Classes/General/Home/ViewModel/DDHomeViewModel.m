@@ -34,6 +34,16 @@
         }];
         return signal3;
     }];
+    
+    self.headCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"%@",input);
+        return [RACSignal empty];
+    }];
+    
+    self.btnCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"%@",input);
+        return [RACSignal empty];
+    }];
 }
 
 

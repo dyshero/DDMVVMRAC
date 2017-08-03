@@ -7,6 +7,9 @@
 //
 
 #import "DDBaseViewModel.h"
+@interface DDBaseViewModel ()
+
+@end
 
 @implementation DDBaseViewModel
 - (instancetype)initWithTitle:(NSString *)title {

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class DDHomeViewModel;
 @interface DDHomeCollectionView : UICollectionView
-@property(nonatomic,strong)NSMutableArray *dataArray;
+@property (nonatomic,strong)NSMutableArray *dataArray;
+@property (nonatomic,strong)NSArray *headArray;
+@property (nonatomic,weak)DDHomeViewModel *viewModel;
 @end

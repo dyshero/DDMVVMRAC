@@ -16,5 +16,7 @@
 #import "UIFont+DDExtension.h"
 #import "UIImage+DDExtension.h"
 #import <MJRefresh/MJRefresh.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #endif /* PrefixHeader_pch */

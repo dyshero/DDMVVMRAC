@@ -7,6 +7,7 @@
 //
 
 #import "DDClassifyViewModel.h"
+#import "DDGoodsDetailViewModel.h"
 #import "DDGoodsModel.h"
 
 @interface DDClassifyViewModel ()
@@ -56,7 +57,10 @@
     }];
     
     self.goodsCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        
+        DDGoodsDetailViewModel *viewModel = [[DDGoodsDetailViewModel alloc] initWithTitle:@"商品详情"];
+        viewModel.goodsModel = (DDGoodsModel *)input;
+        self.naviImpl.className = @"DDGoodsDetailController";
+        [self.naviImpl pushViewModel:viewModel animated:YES];
         return [RACSignal empty];
     }];
 }

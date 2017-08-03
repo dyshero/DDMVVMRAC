@@ -9,5 +9,17 @@
 #import "DDMineViewModel.h"
 
 @implementation DDMineViewModel
+- (instancetype)initWithTitle:(NSString *)title {
+    if (self = [super initWithTitle:title]) {
+        [self initViewModel];
+    }
+    return self;
+}
 
+- (void)initViewModel {
+    self.headClickSubject = [RACSubject subject];
+    [self.headClickSubject subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+}
 @end

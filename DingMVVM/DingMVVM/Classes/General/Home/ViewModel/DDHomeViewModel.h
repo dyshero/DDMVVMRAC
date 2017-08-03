@@ -10,6 +10,8 @@
 
 @interface DDHomeViewModel : DDBaseViewModel
 @property (nonatomic,strong)RACCommand *refreshCommand;
+@property (nonatomic,strong)RACCommand *headCommand;
+@property (nonatomic,strong)RACCommand *btnCommand;
 @property(nonatomic,strong)NSArray      *headData;
 @property(nonatomic,strong)NSArray      *dataArray;
 @end

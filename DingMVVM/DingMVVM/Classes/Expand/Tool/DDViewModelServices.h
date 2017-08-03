@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-@class DDBasedViewModel;
+@class DDBaseViewModel;
 
 @protocol DDViewModelServices <NSObject>
-- (void)pushViewModel:(DDBasedViewModel *)viewModel animated:(BOOL)animated;
+- (void)pushViewModel:(DDBaseViewModel *)viewModel animated:(BOOL)animated;
 
 - (void)popViewControllerWithAnimation:(BOOL)animated;
 
 - (void)popToRootViewModelWithAnimation:(BOOL)animated;
 
-- (void)presentViewModel:(DDBasedViewModel *)viewModel animated:(BOOL)animated complete:(void(^)())complete;
+- (void)presentViewModel:(DDBaseViewModel *)viewModel animated:(BOOL)animated complete:(void(^)())complete;
 
 ///模态弹出vc，用于alert
 - (void)presentViewController:(UIViewController *)viewController animated:(BOOL)animated complete:(void(^)())complete;

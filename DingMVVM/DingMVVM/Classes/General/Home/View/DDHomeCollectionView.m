@@ -9,6 +9,7 @@
 #import "DDHomeCollectionView.h"
 #import "DDHomeCell.h"
 #import "DDHomeHeadView.h"
+#import "DDHomeViewModel.h"
 
 @interface DDHomeCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @end
@@ -50,6 +51,33 @@
     [cell updateGoods:self.dataArray[indexPath.item]];
     return cell;
 }
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    DDHomeHeadView *head = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
+    head.bannerArray = self.headArray.mutableCopy;
+    @weakify(self);
+    [head.bannerSubject subscribeNext:^(id x) {
+        @strongify(self);
+        NSInteger num = [x integerValue];
+        [self.viewModel.headCommand execute:self.headArray[num]];
+    }];
+    [head.btnSubject subscribeNext:^(id x) {
+        @strongify(self);
+        [self.viewModel.btnCommand execute:x];
+    }];
+    return head;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    if (self.headArray.count <= 0)
+    {
+        return CGSizeZero;
+    }
+    return CGSizeMake(kWidth, kWidth * 0.6);
+}
+
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {

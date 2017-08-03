@@ -7,7 +7,8 @@
 //
 
 #import "DDBaseViewModel.h"
+@class DDGoodsModel;
 
 @interface DDGoodsDetailViewModel : DDBaseViewModel
-
+@property (nonatomic,weak) DDGoodsModel *goodsModel;
 @end

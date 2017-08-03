@@ -9,5 +9,5 @@
 #import "DDBaseViewModel.h"
 
 @interface DDMineViewModel : DDBaseViewModel
-
+@property (nonatomic,strong)RACSubject *headClickSubject;
 @end

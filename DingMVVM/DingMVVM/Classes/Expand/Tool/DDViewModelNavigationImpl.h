@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DDViewModelServices.h"
 
-@interface DDViewModelNavigationImpl : NSObject
+@interface DDViewModelNavigationImpl : NSObject<DDViewModelServices>
+@property(nonatomic,copy)NSString *className;
 - (instancetype)initWithNavigationController:(UINavigationController *)navi;
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DDHomeHeadView : UIView
-
+@interface DDHomeHeadView : UICollectionReusableView
+@property (nonatomic,strong)NSArray *bannerArray;
+@property (nonatomic,strong)RACSubject *btnSubject;
+@property (nonatomic,strong)RACSubject *bannerSubject;
 @end

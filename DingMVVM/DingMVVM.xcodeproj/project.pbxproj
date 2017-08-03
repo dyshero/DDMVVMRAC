@@ -58,6 +58,9 @@
 		FB8962A81F31DAB100C6DD35 /* DDViewModelNavigationImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962A71F31DAB100C6DD35 /* DDViewModelNavigationImpl.m */; };
 		FB8962B01F31DE0300C6DD35 /* DDGoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962AF1F31DE0300C6DD35 /* DDGoodsDetailController.m */; };
 		FB8962B31F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8962B21F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m */; };
+		FBC59E811F32FCEF00790DB8 /* DDMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC59E7F1F32FCEF00790DB8 /* DDMineCell.m */; };
+		FBC59E821F32FCEF00790DB8 /* DDMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC59E801F32FCEF00790DB8 /* DDMineCell.xib */; };
+		FBC59E851F3302F400790DB8 /* DDMineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC59E841F3302F400790DB8 /* DDMineButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +151,11 @@
 		FB8962B11F31DE1D00C6DD35 /* DDGoodsDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGoodsDetailViewModel.h; sourceTree = "<group>"; };
 		FB8962B21F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGoodsDetailViewModel.m; sourceTree = "<group>"; };
 		FB8962B41F31E6B900C6DD35 /* DDViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDViewModelServices.h; sourceTree = "<group>"; };
+		FBC59E7E1F32FCEF00790DB8 /* DDMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMineCell.h; sourceTree = "<group>"; };
+		FBC59E7F1F32FCEF00790DB8 /* DDMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMineCell.m; sourceTree = "<group>"; };
+		FBC59E801F32FCEF00790DB8 /* DDMineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDMineCell.xib; sourceTree = "<group>"; };
+		FBC59E831F3302F400790DB8 /* DDMineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMineButton.h; sourceTree = "<group>"; };
+		FBC59E841F3302F400790DB8 /* DDMineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMineButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +397,9 @@
 		FB1C2A6A1F3063FB003EC09E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBC59E7E1F32FCEF00790DB8 /* DDMineCell.h */,
+				FBC59E7F1F32FCEF00790DB8 /* DDMineCell.m */,
+				FBC59E801F32FCEF00790DB8 /* DDMineCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +483,8 @@
 		FB1C2A821F306643003EC09E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				FBC59E831F3302F400790DB8 /* DDMineButton.h */,
+				FBC59E841F3302F400790DB8 /* DDMineButton.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -654,6 +667,7 @@
 				FB1C2AD11F3087AD003EC09E /* FinishDeliveryOrder in Resources */,
 				FB1C2AD21F3087AD003EC09E /* FinishOrder in Resources */,
 				FB8962891F31711200C6DD35 /* DDClassifyLeftCell.xib in Resources */,
+				FBC59E821F32FCEF00790DB8 /* DDMineCell.xib in Resources */,
 				FB1C2ACD1F3087AD003EC09E /* BadComment in Resources */,
 				FB1C2ACA1F3087AD003EC09E /* AddShopAudio.mp3 in Resources */,
 				FB1C2ACF1F3087AD003EC09E /* CategorySiftAll in Resources */,
@@ -727,6 +741,7 @@
 				FB8962B31F31DE1D00C6DD35 /* DDGoodsDetailViewModel.m in Sources */,
 				FB1C2A9F1F30760C003EC09E /* DDShopCartViewModel.m in Sources */,
 				FB8962A41F31B3E400C6DD35 /* DDHomeCell.m in Sources */,
+				FBC59E811F32FCEF00790DB8 /* DDMineCell.m in Sources */,
 				FB8962981F31AE2A00C6DD35 /* DDHomeCollectionView.m in Sources */,
 				FB1C2AEC1F309004003EC09E /* NSObject+Model.m in Sources */,
 				FB1C2AE61F308A49003EC09E /* DDRequestManager.m in Sources */,
@@ -745,6 +760,7 @@
 				FB1C2A8E1F30692E003EC09E /* DDBaseViewController.m in Sources */,
 				FB89628F1F317B1400C6DD35 /* UIFont+DDExtension.m in Sources */,
 				FB1C2A961F3075B1003EC09E /* DDClassifyViewModel.m in Sources */,
+				FBC59E851F3302F400790DB8 /* DDMineButton.m in Sources */,
 				FB8962921F317B9500C6DD35 /* DDClassifyManagerCountView.m in Sources */,
 				FB1C2A7F1F306475003EC09E /* DDShopCartController.m in Sources */,
 				FB8962A01F31B3B900C6DD35 /* DDHomeHeadView.m in Sources */,

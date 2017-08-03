@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DDHomeBannerCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
